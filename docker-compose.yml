@@ -1,0 +1,12 @@
+version: "3.9"
+services: 
+  jupyter:
+    image: biopy-jupyter
+    build: .
+    ports:
+      - 8888:8888
+    environment:
+      JUPYTER_ENABLE_LAB: "yes"
+      JUPYTER_TOKEN: "docker"
+    volumes: 
+      - .:/home/derek/analysis
